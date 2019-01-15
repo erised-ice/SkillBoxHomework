@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400|Tahoma');
+
 body {
   font-family: 'Tahoma', sans-serif;
 }
@@ -64,6 +65,7 @@ background-color: #fbfbfb;
 
 .person {
   background-color: #fbfbfb;
+  margin-bottom: 98px;
 }
 
 .person__inner {
@@ -95,6 +97,43 @@ width: 270px;
 height: 60px;
 background-color: #ff4e2e;
 border: none;
+}
+
+.profile__inner {
+  text-align: center;
+}
+
+.title {
+  color: #262626;
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 59.73px;
+}
+
+.profile__title {
+  margin-bottom: 94px;
+}
+
+.profile__items {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 96px;
+}
+
+.profile__item {
+  text-align: center;
+  width: 258px;
+  color: #8993ad;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.profile__img {
+  margin-bottom: 24px;
+}
+
+.profile__button {
+  margin-bottom: 103px;
 }
 
 @media (min-width: 1024px) {
