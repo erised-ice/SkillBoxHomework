@@ -1,4 +1,285 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400|Tahoma');
 
+body {
+  font-family: 'Tahoma', sans-serif;
+}
 
+.header {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fbfbfb;
+}
 
+.inner {
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 29px 20px 28px;
+  align-items: center;
+}
+
+.nav__link {
+  position: relative;
+  padding: 0 17px 3px;
+  font-size: 16px;
+  color: #1f1f24;
+  text-decoration: none;
+}
+
+.nav__link:after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  content: '';
+  width: calc(100% - 34px);
+  border: 1px solid transparent;
+}
+
+.phone {
+  font-size: 25px;
+}
+
+.header__phone {
+  color: #1f1f24;
+  font-weight: 700;
+  text-decoration: none;  
+  margin-right: 29px;
+}
+
+.header__button {
+  color: #f53f4f;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  width: 207px;
+  padding: 13px 41px 12px;
+  margin-right: 173px;
+  border: 1px solid #f82370;
+  background-color: #fbfbfb;
+}
+
+.person {
+  background-color: #fbfbfb;
+  margin-bottom: 98px;
+}
+
+.person__inner {
+  width: 100%;
+  max-height: 100%;
+  height: 666px;
+  background: url(../img/content/Dmitry\ Alekseev.png) no-repeat bottom right;
+}
+
+.person__name {
+  color: #1f1f24;
+  font-size: 80px;
+  font-weight: 700;
+  letter-spacing: -1px;
+  display: inline-block;
+  margin: 197px 0 23px;
+}
+
+.person__prof {
+  color: #8993ad;
+  font-size: 25px;
+  margin-bottom: 46px;
+}
+
+.red__button {
+  color: #fff;
+  font-size: 18px;
+  width: 270px;
+  height: 60px;
+  background-color: #ff4e2e;
+  border: none;
+}
+
+.profile__inner {
+  text-align: center;
+}
+
+.title {
+  color: #262626;
+  font-size: 54px;
+  font-weight: 700;
+  line-height: 59.73px;
+}
+
+.profile__title {
+  margin-bottom: 94px;
+}
+
+.profile__items {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 96px;
+}
+
+.profile__item {
+  text-align: center;
+  width: 258px;
+  color: #8993ad;
+  font-size: 20px;
+  line-height: 30px;
+}
+
+.profile__img {
+  margin-bottom: 24px;
+}
+
+.profile__button {
+  margin-bottom: 103px;
+}
+
+.portfolio {
+  background-color: #fbfbfb;
+}
+
+.portfolio__inner {
+  text-align: center;
+  padding: 98px 0 102px;
+}
+
+.portfolio__title {
+  margin-bottom: 103px;
+}
+
+.portfolio__items {
+  display: flex;
+  justify-content: space-around;
+}
+
+.portfolio__img {
+  margin-bottom: 37px;
+}
+
+.portfolio__capture {
+  margin-bottom: 97px;
+  color: #8993ad;
+  font-size: 20px;
+  line-height: 59.73px;
+}
+
+.price {
+  background-color: #ff4e2e;
+}
+
+.price__inner {
+  padding: 84px 113px 86px;
+}
+
+.price__title {
+  color: #fff;
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 60px;
+  margin-bottom: 40px;
+}
+
+.price__description {
+  display: flex;
+  color: #fff;
+  font-size: 18px;
+  line-height: 30px;
+  text-align: top;
+}
+
+.price__description-asterix,
+.price__description-text {
+  display: inline-block;
+}
+
+.price__description-asterix {
+  font-size: 20px;
+}
+
+.footer__main {
+  display: flex;
+  padding: 77px 0 80px;
+}
+
+.footer__link {
+  display: block;
+  color: #8993ad;
+  font-size: 18px;
+  padding: 8px 0;
+}
+
+.footer__center {
+  color: #000;
+  font-size: 25px;
+  padding: 0 219px 0 300px; 
+}
+
+.footer__phone,
+.footer__email {
+  display: block;
+  color: #000;
+  padding-left: 38px;
+}
+
+.footer__phone {
+  margin-bottom: 35px;
+  background: url(../img/template/call.png) no-repeat center left;
+}
+
+.footer__email {
+  background: url(../img/template/envelope.png) no-repeat center left;
+}
+
+.footer__button {
+  padding: 13px 41px 12px;
+  background-color: #fff;
+  color: #ff6375;
+  font-size: 16px;
+  width: 248px;
+  height: 45px;
+  border: 1px solid #ff5e79;
+  margin-bottom: 31px;
+}
+
+.footer__social-link {
+  padding: 0 15px 0;
+}
+
+.footer__social-link:first-child {
+  padding-left: 0;
+}
+
+.footer__copyright {
+  color: #fff;
+  font-size: 16px;
+  background-color: #31293c;
+  padding: 31px 0 33px;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  a:hover {
+    color: #fc557c;
+  }
+
+  .header__link:hover:after {
+    border-color: #fc557c;
+  }
+
+  .header__button:hover {
+    color: #fbfbfb;
+    background-color: #f53f4f;
+  }
+
+  .portfolio__item:hover,
+  .footer__social-link:hover {
+    opacity: 0.7;
+  }
+
+  .footer__button:hover {
+    color: #fff;
+    background-color: #ff6375;
+  }
+}
