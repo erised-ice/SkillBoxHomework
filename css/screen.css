@@ -1,11 +1,29 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:400|Tahoma');
+@font-face {
+  font-family: "Tahoma";
+  src: url("../fonts/Tahoma/Tahoma.eot");
+  src: url("../fonts/Tahoma/Tahoma.eot?#iefix")format("embedded-opentype"), 
+  url("../fonts/Tahoma/Tahoma.woff") format("woff"), 
+  url("../fonts/Tahoma/Tahoma.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "RobotoRegular";
+  src: url("../fonts/RobotoRegular/RobotoRegular.eot");
+  src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix")format("embedded-opentype"), 
+  url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"), 
+  url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
 
 body {
   font-family: 'Tahoma', sans-serif;
 }
 
 .header {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'RobotoRegular', sans-serif;
   background-color: #fbfbfb;
 }
 
@@ -54,7 +72,7 @@ body {
 
 .header__button {
   color: #f53f4f;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'RobotoRegular', sans-serif;
   font-size: 16px;
   width: 207px;
   padding: 13px 41px 12px;
@@ -225,7 +243,7 @@ body {
 
 .footer__phone {
   margin-bottom: 35px;
-  background: url(../img/template/call.png) no-repeat center left;
+  background: url(../img/template/contact_sprites.png) no-repeat -10px -40px;
 }
 
 .footer__email {
