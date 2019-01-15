@@ -279,7 +279,7 @@ body {
 
 .popup {
   position: relative;
-  display: none;
+  /* display: none; */
 }
 
 .popup--show {
@@ -297,6 +297,15 @@ body {
 .popup__form {
   position: relative;
   z-index: 2;
+  width: 371px;
+  height: 381px;
+  background-color: #fff;
+}
+
+.popup__title {
+  font-size: 26px;
+  font-weight: 700;
+  text-align: center;
 }
 
 @media (min-width: 1024px) {

@@ -129,13 +129,13 @@
   </footer>
   <div class="popup js-popup">
     <div class="popup__overlay js-popup-close"></div>
-    <form action="#" class="popup__form">
+    <form action="/submit.php" class="popup__form" method="POST">
       <div class="title popup__title">Форма заявки</div>
-      <input type="text" name="Name" placeholder="Имя" id="">
-      <input type="text" name="Phone" placeholder="Телефон" id="">
-      <input class="button--red" type="submit" value="Заказать проект">
-      <label for="Permition">
-        <input type="checkbox" name="Name" id="Permition">
+      <input class="popup__input" type="text" name="name" placeholder="Имя" id="">
+      <input class="popup__input" type="text" name="phone" placeholder="Телефон" id="">
+      <input class="button--red popup__button" type="submit" value="Заказать проект">
+      <label  class="popup__permission" for="permission">
+        <input type="checkbox" name="Name" id="permission">
         Я согласен с условиями обработки персональных данных</label>
     </form>
   </div>
