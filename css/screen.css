@@ -165,6 +165,39 @@ border: none;
   line-height: 59.73px;
 }
 
+.price {
+  background-color: #ff4e2e;
+}
+
+.price__inner {
+  padding: 84px 113px 86px;
+}
+
+.price__title {
+color: #fff;
+font-size: 45px;
+font-weight: 700;
+line-height: 60px;
+margin-bottom: 40px;
+}
+
+.price__description {
+  display: flex;
+color: #fff;
+font-size: 18px;
+line-height: 30px;
+text-align: top;
+}
+
+.price__description-asterix,
+.price__description-text {
+  display: inline-block;
+}
+
+.price__description-asterix {
+  font-size: 20px;
+}
+
 @media (min-width: 1024px) {
   a:hover {
     color: #fc557c;
