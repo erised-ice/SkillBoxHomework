@@ -277,6 +277,28 @@ body {
   text-align: center;
 }
 
+.popup {
+  position: relative;
+  display: none;
+}
+
+.popup--show {
+  display: flex;
+}
+
+.popup__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.popup__form {
+  position: relative;
+  z-index: 2;
+}
+
 @media (min-width: 1024px) {
   a:hover {
     color: #fc557c;
