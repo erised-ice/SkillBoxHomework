@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400|Tahoma');
+.li {
+  font-family: 'Roboto', sans-serif;
+  font-size: 50px;
+  /* Style for "Дмитрий Ал" */
+width: 757px;
+height: 79px;
+color: #7cf817;
+font-size: 80px;
+font-weight: 700;
+line-height: 104.64px;
+/* Text style for "Дмитрий Ал" */
+letter-spacing: -0.91px;
+}
+
+
