@@ -146,16 +146,6 @@ body * {
   }
 }
 
-button,
-button:active,
-button:focus,
-button:hover,
-button:visited {
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
-
 @media (min-width: 1024px) {
   a:hover {
     text-decoration: none;

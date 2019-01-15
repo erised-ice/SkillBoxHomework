@@ -1,16 +1,78 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:400|Tahoma');
-.li {
-  font-family: 'Roboto', sans-serif;
-  font-size: 50px;
-  /* Style for "Дмитрий Ал" */
-width: 757px;
-height: 79px;
-color: #7cf817;
-font-size: 80px;
-font-weight: 700;
-line-height: 104.64px;
-/* Text style for "Дмитрий Ал" */
-letter-spacing: -0.91px;
+body {
+  font-family: 'Tahoma', sans-serif;
 }
 
+.header {
+  font-family: 'Roboto', sans-serif;
+  background-color: #fbfbfb;
+}
 
+.inner {
+  width: 100%;
+  max-width: 1300px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  padding: 29px 20px 28px;
+  align-items: center;
+}
+
+.nav__link {
+  position: relative;
+  padding: 0 17px 3px;
+  font-size: 16px;
+  color: #1f1f24;
+  text-decoration: none;
+}
+
+.nav__link:after {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  content: '';
+  width: calc(100% - 34px);
+  border: 1px solid transparent;
+}
+
+.phone {
+  font-size: 25px;
+}
+
+.header__phone {
+  color: #1f1f24;
+  font-weight: 700;
+  text-decoration: none;  
+  margin-right: 29px;
+}
+
+.header__button {
+color: #f53f4f;
+font-family: 'Roboto', sans-serif;
+font-size: 16px;
+width: 207px;
+padding: 13px 41px 12px;
+margin-right: 173px;
+border: 1px solid #f82370;
+background-color: #fbfbfb;
+}
+
+@media (min-width: 1024px) {
+  a:hover {
+    color: #fc557c;
+  }
+
+  a:hover:after {
+    border-color: #fc557c;
+  }
+
+  .header__button:hover {
+    color: #fbfbfb;
+    background-color: #f53f4f;
+  }
+}
