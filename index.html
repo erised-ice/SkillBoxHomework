@@ -131,12 +131,13 @@
     <div class="popup__overlay js-popup-close"></div>
     <form action="/submit.php" class="popup__form" method="POST">
       <div class="title popup__title">Форма заявки</div>
-      <input class="popup__input" type="text" name="name" placeholder="Имя" id="">
-      <input class="popup__input" type="text" name="phone" placeholder="Телефон" id="">
+      <input class="popup__input" type="text" name="name" placeholder="Имя" required>
+      <input class="popup__input" type="text" name="phone" placeholder="Телефон" required>
+      <input type="checkbox" name="Name" id="permission" class="popup__checkbox">
       <input class="button--red popup__button" type="submit" value="Заказать проект">
       <label  class="popup__permission" for="permission">
-        <input type="checkbox" name="Name" id="permission" class="popup__checkbox">
-        Я согласен с условиями обработки персональных данных</label>
+        Я согласен с условиями обработки персональных данных
+      </label>
     </form>
   </div>
   <script src="js/script.js"></script>

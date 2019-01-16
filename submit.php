@@ -4,28 +4,25 @@ $servername = "localhost";
 $username = "leonzemaim";
 $password = "leonzemaim";
 $dbname = "leonzemaim";
-$link = mysqli_connect($servername, $username, $password, $dbname);
+$db_table = "Orders";
 
 $name = $_POST['name'];
 $phone = $_POST['phone'];
 $date = date('Y-m-d H:i:s');
 
 
-if (!$link) {
-  die("Connection failed: " . mysqli_connect_error());
+$mysqli = new mysqli($servername, $username, $password, $dbname);
+//$mysqli->set_charset("utf8");
+
+if ($mysqli->connect_error) {
+  die('Ошибка : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
 }
 
-echo "Connected successfully";
+$result = $mysqli->query("INSERT INTO ".$db_table." (name,phone,date) VALUES ('$name','$phone','$date')");
 
-$sql = "INSERT INTO `orders` (`id`, `name`, `phone`) VALUES ($name, $phone)";
-
-
-
-if (mysqli_query($link, $sql)) {
-  mysqli_close($link);
+if ($result == true) {	
   header("Location: /");
 } else {
-  echo "Error: " . $sql . "<br>" . mysqli_error($link);
-  mysqli_close($link);
+	echo "Информация не занесена в базу данных";
 }
 
