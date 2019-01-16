@@ -43,12 +43,31 @@ body {
   align-items: center;
 }
 
-.nav__link {
+.header__input,
+.footer__input {
+  display: none;
+}
+
+
+.nav__link, 
+.header__label {
   position: relative;
   padding: 0 17px 3px;
   font-size: 16px;
   color: #1f1f24;
   text-decoration: none;
+}
+
+.header__label {
+  text-align: center; 
+  color: #f53f4f;
+  display: none;
+}
+
+.header__label,
+.footer__label {
+  padding-bottom: 20px;
+  cursor: pointer;
 }
 
 .nav__link:after {
@@ -224,6 +243,10 @@ body {
   flex-wrap: wrap;
   padding: 77px 20px 80px;
   justify-content: space-between;
+}
+
+.footer__label {
+  display: none;
 }
 
 .footer__link {
@@ -446,6 +469,40 @@ body {
 }
 
 @media (max-width: 767px) {
+  .header__inner, 
+  .profile__inner {
+    text-align: center;
+  }
+  
+  .header__label,
+  .footer__label {
+    display: block;
+  }
+
+  .nav {
+    width: 100%;
+    text-align: center;
+  }
+
+  .header__nav,
+  .footer__nav {
+    transition: 0.5s ease max-height;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+
+  .header__input:checked ~ .header__nav,
+  .footer__input:checked ~ .footer__nav {
+    max-height: 500px;
+  }
+
+  .nav__link {
+    display: block;
+    font-size: 18px;
+    padding: 8px 0;
+  }
+
   .person,
   .profile__items,
   .button {
@@ -478,11 +535,5 @@ body {
   .portfolio__img,
   .portfolio__capture {
     margin-bottom: 0;
-  }
-}
-
-@media (max-width: 480px) {
-  .title {
-    
   }
 }
