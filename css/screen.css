@@ -68,6 +68,8 @@ body {
 .footer__label {
   padding-bottom: 20px;
   cursor: pointer;
+  width: 100%;
+  text-align: center;
 }
 
 .nav__link:after {
