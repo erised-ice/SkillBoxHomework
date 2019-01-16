@@ -12,7 +12,7 @@ $date = date('Y-m-d H:i:s');
 
 
 $mysqli = new mysqli($servername, $username, $password, $dbname);
-//$mysqli->set_charset("utf8");
+$mysqli->set_charset("utf8");
 
 if ($mysqli->connect_error) {
   die('Ошибка : ('. $mysqli->connect_errno .') '. $mysqli->connect_error);
@@ -21,8 +21,7 @@ if ($mysqli->connect_error) {
 $result = $mysqli->query("INSERT INTO ".$db_table." (name,phone,date) VALUES ('$name','$phone','$date')");
 
 if ($result == true) {	
-  header("Location: /");
+  header("Location: /?submit=true");
 } else {
 	echo "Информация не занесена в базу данных";
 }
-

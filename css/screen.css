@@ -48,7 +48,6 @@ body {
   display: none;
 }
 
-
 .nav__link, 
 .header__label {
   position: relative;
@@ -58,15 +57,17 @@ body {
   text-decoration: none;
 }
 
-.header__label {
+.header__label,
+.footer__label {
   text-align: center; 
-  color: #f53f4f;
+  color: #fff;
   display: none;
+  background: #ff4e2e;
 }
 
 .header__label,
 .footer__label {
-  padding-bottom: 20px;
+  padding: 15px 0;
   cursor: pointer;
   width: 100%;
   text-align: center;
@@ -110,11 +111,23 @@ body {
 }
 
 .person__inner {
+  position: relative;
   width: 100%;
   max-height: 100%;
   height: 666px;
-  background: url(../img/content/Dmitry\ Alekseev.png) no-repeat bottom right;
+  background: url('../img/content/freelancer.png') no-repeat bottom right;
   background-size: contain;
+}
+
+.person__text {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translate(0, -50%); 
+}
+
+.person__img {
+  display: none;
 }
 
 .person__name {
@@ -123,7 +136,7 @@ body {
   font-weight: 700;
   letter-spacing: -1px;
   display: inline-block;
-  margin: 197px 0 23px;
+  margin-bottom: 23px;
 }
 
 .person__prof {
@@ -164,8 +177,7 @@ body {
 
 .profile__item {
   text-align: center;
-  max-width: 262px;
-  min-width: 250px;
+  flex: 0 1 calc(25% - 20px);
   color: #8993ad;
   font-size: 20px;
 }
@@ -197,15 +209,24 @@ body {
   justify-content: space-around;
 }
 
+.portfolio__item {
+  flex: 1 1 calc(33.333% - 20px);
+  max-width: 370px;
+}
+
+.portfolio__item:not(:nth-last-child(1)) {
+  margin-right: 15px;
+}
+
 .portfolio__img {
   margin-bottom: 12px;
+  max-width: 100%;
 }
 
 .portfolio__capture {
   margin-bottom: 97px;
   color: #8993ad;
   font-size: 20px;
-  line-height: 59.73px;
 }
 
 .price {
@@ -273,11 +294,11 @@ body {
 
 .footer__phone {
   margin-bottom: 35px;
-  background: url(../img/template/contact_sprites.png) no-repeat -10px -40px;
+  background: url('../img/template/contact_sprites.png') no-repeat -10px -40px;
 }
 
 .footer__email {
-  background: url(../img/template/envelope.png) no-repeat center left;
+  background: url('../img/template/envelope.png') no-repeat center left;
 }
 
 .footer__button {
@@ -373,6 +394,7 @@ body {
   line-height: 19.78px;
   padding-left: 30px;
   position: relative;
+  cursor: pointer;
 }
 
 .popup__checkbox {
@@ -399,7 +421,7 @@ body {
 
 .popup__permission:after {
   opacity: 0;
-  color: red;
+  color: #ff4e2e;
   content: '\2714';
   font-size: 14px;
   position: absolute;
@@ -410,6 +432,21 @@ body {
 
 .popup__checkbox:checked ~ .popup__permission:after {
   opacity: 1;
+}
+
+.alert {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  padding: 10px;
+  background: #ff4e2e;
+  opacity: 0.8;
+  color: #fff;
+  font-weight: bold;
+  font-size: 28px;
+  display: none;
 }
 
 @media (min-width: 1024px) {
@@ -437,6 +474,20 @@ body {
   }
 }
 
+@media (max-width: 1200px) {
+  .person__name {
+    font-size: 50px;
+  }
+
+  .person__prof {
+    font-size: 20px;
+  }
+
+  .header__button {
+    margin-right: 0;
+  }
+}
+
 @media (max-width: 1023px) {
   .nav,
   .header__phone,
@@ -444,7 +495,7 @@ body {
   .portfolio__item,
   .footer__center,
   .footer__right {
-    padding: 15px 5px;
+    padding: 15px 10px;
   }
 
   .header__button {
@@ -454,6 +505,10 @@ body {
   .header__inner,
   .footer__main {
     justify-content: space-around;
+  }
+
+  .person__inner {
+    height: 400px;
   }
 
   .price__inner {
@@ -467,6 +522,21 @@ body {
   .price__title {
     font-size: 30px;
     margin-bottom: 20px;
+  }
+
+  .profile__item {
+    margin-bottom: 40px;
+    flex: 0 1 calc(50% - 20px);
+  }
+
+  .title {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  .person__inner {
+    background-size: 400px;
+    background-position: right center;
   }
 }
 
@@ -530,12 +600,67 @@ body {
   }
   
   .title {
-    font-size: 40px;
+    font-size: 28px;
     margin-bottom: 20px;
   }
 
   .portfolio__img,
   .portfolio__capture {
     margin-bottom: 0;
+  }
+
+  .profile__item {
+    margin-bottom: 40px;
+    flex: 1 1 100%;
+  }
+
+  .profile__item:nth-last-child(1) {
+    margin-bottom: 0;
+  }
+
+  .portfolio__item {
+    flex: 1 1 100%;
+    max-width: 370px;
+  }
+
+  .portfolio__item:not(:nth-last-child(1)) {
+    margin-right: 0;
+    margin-bottom: 30px;
+  }
+
+  .person__inner {
+    height: auto;
+    background: none;
+  }
+
+  .person__text {
+    position: static;
+    width: 100%;
+    margin-top: 30px;
+    transform: none;
+  }
+
+  .person__button {
+    margin-bottom: 0;
+  }
+
+  .person__img {
+    display: block;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .person__img img {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .person__name {
+    font-size: 36px;
+  }
+
+  .person__prof,
+  .alert {
+    font-size: 18px;
   }
 }

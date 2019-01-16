@@ -9,10 +9,16 @@
 </head>
 <body>
 <?php
-    $pdo = new PDO('mysql:host=localhost;dbname=leonzemaim;charset=utf8', 'leonzemaim', 'leonzemaim');
-    $stmt = $pdo->prepare('SELECT * FROM Orders');
-    $stmt->execute();
-  ?>
+  $dsn = 'mysql:host=localhost;dbname=leonzemaim';
+  $username = 'leonzemaim';
+  $password = 'leonzemaim';
+  $options = array(
+      PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
+  ); 
+  $pdo = new PDO($dsn, $username, $password, $options);
+  $stmt = $pdo->prepare('SELECT name, phone, date FROM Orders ORDER BY name');
+  $stmt->execute();
+?>
 
 
 
@@ -38,7 +44,7 @@
 
 <style>
   .orders {
-    padding:
+    padding: 20px;
   }
   h1 {
     font-size: 28px;

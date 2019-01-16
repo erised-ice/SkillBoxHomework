@@ -15,10 +15,10 @@
         <label for="header-input" class="header__label">
           Меню
         </label>
-      <nav class="nav header__nav">
-        <a href="#" class="nav__link header__link">Услуги</a>
-        <a href="#" class="nav__link header__link">Портфолио</a>
-        <a href="#" class="nav__link header__link">Стоимость</a>
+      <nav class="nav header__nav js-nav">
+        <a href="#block1" class="nav__link header__link">Услуги</a>
+        <a href="#block2" class="nav__link header__link">Портфолио</a>
+        <a href="#block3" class="nav__link header__link">Стоимость</a>
       </nav>
       <div class="header__contacts">
         <a href="tel:+74999955577" class="phone header__phone">
@@ -33,12 +33,17 @@
   <main class="main">
     <div class="person">
       <div class="inner person__inner">
-        <div class="person__name">Дмитрий Алексеев</div>
-        <div class="person__prof">Frontend-разработчик и веб-верстальщик</div>
-        <button class="button button--red person__button js-open-popup">Узнать больше</button>
+        <div class="person__img">
+          <img src="img/content/freelancer.png" alt="">
+        </div>
+        <div class="person__text">
+          <div class="person__name">Дмитрий Алексеев</div>
+          <div class="person__prof">Frontend-разработчик и веб-верстальщик</div>
+          <button class="button button--red person__button js-open-popup">Узнать больше</button>
+        </div>
       </div>
     </div>     
-    <div class="profile">
+    <div class="profile" id="block1">
       <div class="inner profile__inner">
           <div class="title profile__title">Что я делаю</div> 
           <div class="profile__items">
@@ -66,7 +71,7 @@
           <button class="button button--red profile__button js-open-popup">Узнать стоимость</button>
         </div>
     </div>
-    <div class="portfolio">
+    <div class="portfolio" id="block2">
           <div class="inner portfolio__inner">
             <div class="title portfolio__title">Примеры моих работ</div>
             <div class="portfolio__items">
@@ -86,7 +91,7 @@
             <button class="button button--red portfolio__button js-open-popup">Заказать проект</button>
           </div>
     </div>
-    <div class="price">
+    <div class="price" id="block3">
         <div class="inner price__inner">
           <div class="price__title">
             Адаптивная вёрстка под все устройства<br>
@@ -106,10 +111,10 @@
         <label for="footer-input" class="footer__label">
           Меню
         </label>
-      <nav class="nav footer__nav">
-        <a href="#" class="nav__link footer__link">Услуги</a>
-        <a href="#" class="nav__link footer__link">Портфолио</a>
-        <a href="#" class="nav__link footer__link">Стоимость</a>
+      <nav class="nav footer__nav js-nav">
+        <a href="#block1" class="nav__link footer__link">Услуги</a>
+        <a href="#block2" class="nav__link footer__link">Портфолио</a>
+        <a href="#block3" class="nav__link footer__link">Стоимость</a>
       </nav>
       <div class="footer__center">
         <a href="tel:+74999957755" class="phone footer__phone">+7 (499) 995-77-55</a>
@@ -137,7 +142,7 @@
   </footer>
   <div class="popup js-popup">
     <div class="popup__overlay js-popup-close"></div>
-    <form action="/submit.php" class="popup__form" method="POST">
+    <form action="/submit.php" class="popup__form js-popup-form" method="POST">
       <div class="title popup__title">Форма заявки</div>
       <input class="popup__input" type="text" name="name" placeholder="Имя" required>
       <input class="popup__input" type="text" name="phone" placeholder="Телефон" required>
@@ -148,6 +153,8 @@
       </label>
     </form>
   </div>
+  <div class="js-alert alert">Ваша заявка принята. Мы вам перезвоним.</div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
