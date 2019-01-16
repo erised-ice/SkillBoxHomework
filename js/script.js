@@ -14,4 +14,10 @@ window.onload = function() {
   });
 
   popupCloseSelector.addEventListener('click', closePopup);
+
+  window.onkeydown = function(event) {
+    if (event.keyCode == 27) {
+        closePopup()
+    }
+  };
 };

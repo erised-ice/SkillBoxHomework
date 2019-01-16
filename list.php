@@ -8,11 +8,13 @@
   <link rel="stylesheet" href="css/reset.css">
 </head>
 <body>
-  <?php
-    $pdo = new PDO('mysql:host=localhost;dbname=leonzemaim', 'leonzemaim', 'leonzemaim');
+<?php
+    $pdo = new PDO('mysql:host=localhost;dbname=leonzemaim;charset=utf8', 'leonzemaim', 'leonzemaim');
     $stmt = $pdo->prepare('SELECT * FROM Orders');
     $stmt->execute();
   ?>
+
+
 
 <div class="orders">
   <h1>Список заявок</h1>
