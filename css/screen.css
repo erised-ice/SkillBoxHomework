@@ -294,11 +294,11 @@ body {
 
 .footer__phone {
   margin-bottom: 35px;
-  background: url('../img/template/contact_sprites.png') no-repeat -10px -40px;
+  background: url('../img/template/contact_sprites.png') no-repeat -6px -40px;
 }
 
 .footer__email {
-  background: url('../img/template/envelope.png') no-repeat center left;
+  background: url('../img/template/contact_sprites.png') no-repeat -8px 0px;
 }
 
 .footer__button {
