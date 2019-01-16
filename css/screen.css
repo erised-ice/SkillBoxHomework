@@ -19,17 +19,18 @@
 }
 
 body {
-  font-family: 'Tahoma', sans-serif;
+  font-family: 'Tahoma';
+  min-width: 320px;
 }
 
 .header {
-  font-family: 'RobotoRegular', sans-serif;
+  font-family: 'RobotoRegular';
   background-color: #fbfbfb;
 }
 
 .inner {
   width: 100%;
-  max-width: 1400px;
+  max-width: 1383px;
   padding: 0 20px;
   margin: 0 auto;
 }
@@ -37,6 +38,7 @@ body {
 .header__inner {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   padding: 29px 20px 28px;
   align-items: center;
 }
@@ -91,6 +93,7 @@ body {
   max-height: 100%;
   height: 666px;
   background: url(../img/content/Dmitry\ Alekseev.png) no-repeat bottom right;
+  background-size: contain;
 }
 
 .person__name {
@@ -125,7 +128,6 @@ body {
   color: #262626;
   font-size: 54px;
   font-weight: 700;
-  line-height: 59.73px;
 }
 
 .profile__title {
@@ -134,20 +136,21 @@ body {
 
 .profile__items {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-bottom: 96px;
 }
 
 .profile__item {
   text-align: center;
-  width: 258px;
+  max-width: 262px;
+  min-width: 250px;
   color: #8993ad;
   font-size: 20px;
-  line-height: 30px;
 }
 
 .profile__img {
-  margin-bottom: 24px;
+  margin-bottom: 21px;
 }
 
 .profile__button {
@@ -169,11 +172,12 @@ body {
 
 .portfolio__items {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 
 .portfolio__img {
-  margin-bottom: 37px;
+  margin-bottom: 12px;
 }
 
 .portfolio__capture {
@@ -195,7 +199,6 @@ body {
   color: #fff;
   font-size: 45px;
   font-weight: 700;
-  line-height: 60px;
   margin-bottom: 40px;
 }
 
@@ -218,7 +221,9 @@ body {
 
 .footer__main {
   display: flex;
-  padding: 77px 0 80px;
+  flex-wrap: wrap;
+  padding: 77px 20px 80px;
+  justify-content: space-between;
 }
 
 .footer__link {
@@ -309,7 +314,7 @@ body {
   left: 50%;
   z-index: 2;
   width: 371px;
-  padding: 22px 40px 29px;
+  padding: 21px 40px 27px;
   background-color: #fff;
   text-align: center;
   transform: translate(-50%, -50%);
@@ -348,6 +353,13 @@ body {
 .popup__checkbox {
   display: none;
 }
+
+.popup__checkbox:checked ~
+.popup__button {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 
 .popup__permission:before {
   content: '';
@@ -397,5 +409,80 @@ body {
   .footer__button:hover {
     color: #fff;
     background-color: #ff6375;
+  }
+}
+
+@media (max-width: 1023px) {
+  .nav,
+  .header__phone,
+  .profile__item,
+  .portfolio__item,
+  .footer__center,
+  .footer__right {
+    padding: 15px 5px;
+  }
+
+  .header__button {
+    margin: 15px 5px;
+  }
+
+  .header__inner,
+  .footer__main {
+    justify-content: space-around;
+  }
+
+  .price__inner {
+    padding: 20px auto;
+  }
+
+  .price__inner {
+    padding: 20px 20px;
+  }
+
+  .price__title {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .person,
+  .profile__items,
+  .button {
+    margin-bottom: 40px;
+  }
+
+  .person__inner {
+    text-align: center;
+  }
+
+  .person__name {
+    margin: 20px 0;
+    font-size: 50px;
+  }
+
+  .person__prof {
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  .portfolio__inner {
+    padding: 20px 0;
+  }
+  
+  .title {
+    font-size: 40px;
+    margin-bottom: 20px;
+  }
+
+  .portfolio__img,
+  .portfolio__capture {
+    margin-bottom: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    
   }
 }
